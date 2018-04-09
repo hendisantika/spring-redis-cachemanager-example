@@ -30,6 +30,7 @@ public class AppConfig {
 
     private @Value("${redis.host}")
     String redisHost;
+
     private @Value("${redis.port}")
     int redisPort;
 
