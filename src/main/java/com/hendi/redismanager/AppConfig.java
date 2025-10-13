@@ -57,6 +57,7 @@ public class AppConfig {
 
     @Bean
     CacheManager cacheManager() {
-        return new RedisCacheManager(redisTemplate());
+        return RedisCacheManager.builder(jedisConnectionFactory())
+                .build();
     }
 }
